@@ -4,6 +4,8 @@ class ListingsController < ApplicationController
   # and destroy. You may use any order you choose, but keep in mind that these
   # are public methods; as mentioned earlier in this guide, they must be placed
   # before any private or protected method in the controller in order to work.
+  http_basic_authenticate_with name: "user", password: "pass", except: [:index, :show]
+
   def index
     @listings = Listing.all
   end
