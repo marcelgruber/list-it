@@ -1,0 +1,11 @@
+<p>
+  <strong>Title:</strong>
+  <%= @listing.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @listing.description %>
+</p>
+<%= link_to 'Back to Listings', listings_path %> |
+<%= link_to 'Edit', edit_listing_path(@listing) %>
