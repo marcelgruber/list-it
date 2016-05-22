@@ -44,11 +44,11 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
 production:
-  <<: *default
-  database: list-it_production
-  username: list-it
-  password: <%= ENV['LIST-IT_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
+# production:
+#   <<: *default
+#   database: list-it_production
+#   username: list-it
+#   password: <%= ENV['LIST-IT_DATABASE_PASSWORD'] %>
