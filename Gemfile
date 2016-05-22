@@ -43,6 +43,7 @@ gem 'rspec-rails'
 gem 'factory_girl_rails'
 gem 'pry-rails'
 gem 'rails_layout'
+gem 'bootstrap-sass'
 # END MARCEL ADDED ITEMS ======
 
 # Use Capistrano for deployment
