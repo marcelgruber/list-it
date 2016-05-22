@@ -1,4 +1,10 @@
-<h1>Hello, DudeMan!</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-<%= link_to 'View All Listings', controller: 'listings' %>  </br>
-<%= link_to 'New Listing', new_listing_path %>
+<% if user_signed_in? %>
+  <h1>Hello</h1>
+  <li><%= link_to "Create New Listing", new_listing_path %></li>
+  <li><%= link_to "View all Listings", listings_path %></li>
+<% else %>
+  <div class='text-center'>
+    <h1>Welcome to QuipOil</h1>
+    <p>QuipOil is a new, modern and easy to use listing service for new and surplus Oil and Gas Equipment exclusively for companies based in Alberta, Canada. Our website and newsletter will not only be easy to read and navigate but will be unique in that we will only feature equipment from trusted partners and companies that we have established direct relationships with.</p>
+  </div>
+<% end %>

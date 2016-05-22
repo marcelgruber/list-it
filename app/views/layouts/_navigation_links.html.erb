@@ -1,3 +1,5 @@
 <%# add navigation links to this file %>
-<li><%= link_to "Create New Listing", new_listing_path %></li>
-<li><%= link_to "View all Listings", listings_path %></li>
+<% if user_signed_in? %>
+  <li><%= link_to "Create New Listing", new_listing_path %></li>
+  <li><%= link_to "View all Listings", listings_path %></li>
+<% end %>

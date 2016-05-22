@@ -1,21 +1,19 @@
-<h1>Listing articles</h1>
+<h1>All Listings</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th colspan="3"></th>
-  </tr>
-
+<div class="row">
   <% @listings.each do |listing| %>
-    <tr>
-      <td><%= listing.title %></td>
-      <td><%= listing.description %></td>
-      <td><%= link_to 'Show', listing_path(listing) %></td>
-      <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-      <td><%= link_to 'Destroy', listing_path(listing),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+    <div class="col-md-3">
+      <div class='well'>
+        <%= link_to (image_tag ('/pumpjack1.jpg'), class: ''), listing %>
+        <h4><%= listing.title %></h4>
+        <p><%= listing.description %></p>
+
+        <%= link_to 'View', listing_path(listing) %> |
+        <%= link_to 'Edit', edit_listing_path(listing) %> |
+        <%= link_to 'Destroy', listing_path(listing),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
   <% end %>
-</table>
+</div>
