@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  http_basic_authenticate_with name: "user", password: "pass", only: :destroy
+  #http_basic_authenticate_with name: "quipoil", password: "password", only: :destroy
 
   def create
     @listing = Listing.find(params[:listing_id])
